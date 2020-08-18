@@ -1,0 +1,149 @@
+body{
+    background: #9aff5a;
+    overflow:hidden;
+}
+
+
+.forward{
+    position: fixed;
+    font-size:5rem;
+    outline: none;
+    border:none;
+    color:green;
+    background: transparent;
+    top:50%;
+    right:2%;
+    cursor:pointer;
+    z-index: 10;
+    
+}
+
+.backward{
+    position: fixed;
+    font-size:5rem;
+    outline: none;
+    border:none;
+    color:green;
+    background: transparent;
+    top:50%;
+    left:0;
+    cursor: pointer;
+    z-index: 10;
+  
+}
+.car{
+/*    max-width: 40rem;*/
+    
+    width:40rem;
+    height: 40rem;
+    margin : 5rem auto;
+    position: relative;
+    
+    
+}
+
+.car::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width:40rem;
+    height: 40rem;
+    top:0;
+    left:0;
+    outline: 5px solid green;
+    outline-offset: 2rem;    
+}
+
+
+.dotContainer{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:60%;
+}
+
+.dots{
+    width:1rem;
+    height:1rem;
+    border-radius: 50%;
+    background: #bfd6bb;
+    transition: all .4s;
+}
+.slider{
+    display: flex;
+    flex:1;
+    position: absolute;
+    transition: all .4s cubic-bezier(.455,.03,.515,.955);
+
+
+
+}
+
+.slider img{
+    width:40rem;
+    height:40rem;
+    object-fit: cover;  
+    transform: scale(0);
+    transition: all .4s cubic-bezier(.455,.03,.515,.955);
+/*    transition-delay: .05s;*/
+}
+
+img.left-1{
+    z-index: 10;
+    transform: perspective(76rem) scale(.7) rotateY(27deg);
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.6);
+}
+
+img.left-2{
+    z-index: -10;
+    transform: perspective(76rem) scale(.7) rotateY(46deg) translateZ(-78rem);
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.6);
+}
+
+
+img.right-1{
+    z-index: 10;
+    transform: perspective(76rem) scale(.7) rotateY(-27deg);
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.6);
+}
+
+img.right-2{
+    z-index: -10;
+    transform: perspective(76rem) scale(.7) rotateY(-46deg) translateZ(-78rem);
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+
+.car.active-slide-0 #img-0,
+.car.active-slide-1 #img-1,
+.car.active-slide-2 #img-2,
+.car.active-slide-3 #img-3,
+.car.active-slide-4 #img-4,
+.car.active-slide-5 #img-5,
+.car.active-slide-6 #img-6,
+.car.active-slide-7 #img-7{
+     opacity: 1 !important;
+    transform: scale(1.0) rotateY(0)!important;
+}
+
+.active-dot-0 #dot-0,
+.active-dot-1 #dot-1,
+.active-dot-2 #dot-2,
+.active-dot-3 #dot-3,
+.active-dot-4 #dot-4,
+.active-dot-5 #dot-5,
+.active-dot-6 #dot-6,
+.active-dot-7 #dot-7{
+    background: green;;
+}
+
+
+
